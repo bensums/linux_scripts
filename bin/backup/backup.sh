@@ -41,8 +41,8 @@ borg create                           \
     --exclude '/sys/*'                \
     --exclude '/tmp/*'                \
     --exclude '/swapfile'             \
-    ::'{hostname}-{now}'              \
-    / 
+    ::'{hostname}-{now:%Y-%m-%d}'     \
+    /
 
 backup_exit=$?
 
