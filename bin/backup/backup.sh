@@ -40,7 +40,7 @@ borg create                           \
     --exclude '/run/*'                \
     --exclude '/sys/*'                \
     --exclude '/.snapshots/*'         \
-    --exclude '/tmp/*'                \
+    --exclude '*/tmp/*'               \
     --exclude '/swapfile'             \
     ::'{hostname}-{now:%Y-%m-%d}'     \
     /
