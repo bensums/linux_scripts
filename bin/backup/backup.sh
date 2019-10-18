@@ -42,6 +42,7 @@ borg create                           \
     --exclude '/.snapshots/*'         \
     --exclude '*/tmp/*'               \
     --exclude '/swapfile'             \
+    --exclude '/timeshift/*'          \
     ::'{hostname}-{now:%Y-%m-%d}'     \
     /
 
