@@ -25,7 +25,7 @@ echo Saving ACLs
 # To restore: # setfacl --restore=${ACL_FILE}
 mkdir -p ${ACL_DIR}
 rm -rf ${ACL_DIR}*
-for f in /!(dev|proc|sys|tmp|run|mnt|media|lost+found|swapfile); do
+for f in /!(dev|proc|sys|tmp|run|mnt|media|lost+found|swapfile|timeshift); do
 	ACL_FILE=${ACL_DIR}${f}.acls
 	echo $f -\> $ACL_FILE
 	getfacl -n -p -R $f > ${ACL_FILE}
