@@ -11,7 +11,7 @@
 
 # Setup environment variables
 BASE_DIR=$(dirname "$0")
-export BORG_RSH='ssh -i ~/.ssh/id_rsa -o BatchMode=yes -o VerifyHostKeyDNS=yes'
+export BORG_RSH='ssh -i ~/.ssh/id_rsa -o BatchMode=yes -o VerifyHostKeyDNS=yes -o ServerAliveInterval=10 -o ServerAliveCountMax=30'
 source $BASE_DIR/vars.sh
 
 # some helpers and error handling:
